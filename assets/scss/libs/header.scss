@@ -1,0 +1,99 @@
+.header{
+    padding: 10px 0;
+    .header_content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        nav{
+            display: none;
+        }
+        .logo{
+            width: 60px;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+        .header_contant{
+            display: flex;
+            align-items: center;
+            .tel{
+                font-size: 12px;
+                font-weight: 400;
+                color: #444444;
+                display: flex;
+                line-height: 30px;
+                position: relative;
+                padding-left: 20px;
+                font-family: 'Proxima Nova Rg';
+                img{
+                    left: 0;
+                    top: 50%;
+                    width: 12px;
+                    display: block;
+                    position: absolute;
+                    transform: translate(0, -50%);
+                }
+                span{
+                    display: none;
+                }
+            }
+            .enroll{
+                display: none;
+            }
+            .open_menu{
+                width: 38px;
+                height: 38px;
+                display: flex;
+                margin-left: 10px;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                &::after{
+                    content: '';
+                    left: 50%;
+                    bottom: 10px;
+                    width: 28px;
+                    height: 2px;
+                    position: absolute;
+                    background: #444444;
+                    transform: translate(-50%, 0);
+                }
+                &::before{
+                    content: '';
+                    top: 10px;
+                    left: 50%;
+                    width: 28px;
+                    height: 2px;
+                    position: absolute;
+                    background: #444444;
+                    transform: translate(-50%, 0);
+                }
+                span{
+                    width: 28px;
+                    height: 2px;
+                    display: block;
+                    background: #444444;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    
+
+}
+
+@media (min-width: 1024px) {
+
+    
+
+}
+
+@media (min-width: 1280px) {
+
+    
+
+}
