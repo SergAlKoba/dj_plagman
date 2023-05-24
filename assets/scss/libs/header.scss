@@ -82,18 +82,145 @@
 
 @media (min-width: 768px) {
 
-    
 
 }
 
 @media (min-width: 1024px) {
 
+    .header{
+            padding: 11px 0;
+            .header_content{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                nav{
+                    display: block;
+                    ul {
+                        display: flex;
+                        a {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+                            padding: 10px;
+                            color: #273443;
+                        }
+                        a:hover {
+                            color: #4081EC;
+                        }
+                    }
+                }
+                .logo{
+                    width: 70px;
+                    img{
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .header_contant{
+                    display: flex;
+                    align-items: center;
+                    .tel{
+                        margin-right: 30px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #444444;
+                        display: block;
+                        line-height: 30px;
+                        position: relative;
+                        padding-left: 20px;
+                        font-family: 'Proxima Nova Rg';
+
+                        
+                        img{
+                            left: 0;
+                            top: 40%;
+                            width: 12px;
+                            display: block;
+                            position: absolute;
+                            transform: translate(0, -100%);
+                        }
+                        span{
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 21px;
     
+                            text-transform: uppercase;
+                            color: #444444;
+    
+                            display: block;
+                            transform: translate(0, 30%);
+                        }
+                    }
+                    .enroll{
+                        
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 21px;
+    
+                        text-transform: uppercase;
+                        display: flex;
+                        padding: 10px 40px;
+                        border: 1px solid #4081EC;
+                        border-radius: 42px;
+                    }
+                    .enroll:hover {
+                        background-color: #4081EC;
+                        color: aliceblue;
+                    }
+                    .open_menu{
+                        display: none;
+                    }
+                }
+            }
+        }
 
 }
 
 @media (min-width: 1280px) {
 
-    
+    .header{
+        padding: 11px 0;
+        .header_content{
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            nav{
+                display: block;
+                ul {
+                    display: flex;
+                    a {
+                        padding: 20px;
+                    }
+                }
+            }
+            .logo{
+                width: 98px;
+                img{
+                    width: 100%;
+                    display: block; 
+                }
+            }
+            .header_contant{
+                display: flex;
+                align-items: center;
+                
+                .tel{
+                    display: block;
+                    margin-top: 9px;
+                    margin-right: 30px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #444444;
+                    line-height: 30px;
+                    position: relative;
+                    padding-left: 20px;
+                    font-family: 'Proxima Nova Rg';
+                }
+                
+            }
+        }
+    }
 
 }
