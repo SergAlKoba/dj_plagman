@@ -1,8 +1,9 @@
 @import 'libs/slick';
 
 .banner{
-    padding: 50px 0 60px;
+    padding: 26px 0 60px;
     .banner_text{
+        text-align: center;
         h3{
             font-size: 12px;
             color: #273443;
@@ -29,18 +30,392 @@
             margin-bottom: 20px;
             font-family: 'Proxima Nova Rg';
         }
-        form{
+
+        form {
+            display: flex;
+            max-width: 335px;
+            border-radius: 32px;
+            justify-content: space-between;
+            align-items: center;
+            background: #F8F8F8;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+             
+            img {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+                margin-left: 23px;
+            }
+
+            input[type="tel"] {
+                border: none;
+                font-weight: 400;
+                font-size: 13px;
+                color: #656565;
+                line-height: 28px;
+                background: #F8F8F8;
+                font-family: 'Proxima Nova Rg';
+            }
+
+
+            input[type="submit"] {
+                padding: 5px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 21px;
+                color: #FFFFFF;
+                text-transform: uppercase;
+
+                width: 119px;
+                height: 37px;
+                border: none;
+                border-radius: 42px;
+                background: linear-gradient(92deg, #4081EC 0%, #6FA4FB 100%);
+            }
+        
+        }
+
+    }
+    
+    .banner_doctor {
+        
+        padding-top: 20px;
+        padding-left: 30px;
+        text-align: center;
+        margin-right: 0;
+        display: flex;
+       flex-direction: column;
+       align-items: center;
+
+        .banner_doctor-img {
+            display: none;
+        }
+        
+        .banner_reviews {
+            margin-bottom: 10px;
+            padding: 10px 6px;
+            width: 180px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+            h4 {
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: -0.01em;
+                color: #0494DA;
+                font-family: 'Proxima Nova Lt';
+            }
+
+            span {
+                font-size: 9px;
+                line-height: 11px;
+                text-align: center;
+                color: #747474;
+                font-family: 'Proxima Nova Lt';
+            }
 
         }
+       
+        .speakers {
+            margin-bottom: 10px;
+            width: 200px;
+            padding: 10px 15px 10px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+             span {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 17px;
+                color: #273443;
+                
+
+             }
+
+             ul {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-evenly;
+             }
+
+        }
+     
+        .schedule {
+            padding: 2px 6px 12px;
+            width: 155px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+            span {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 11px;
+                line-height: 11px;
+                text-align: center;
+                color: #747474;
+                font-family: 'Proxima Nova Lt';
+            }
+
+        }
+
     }
+
+    .banner_slider {
+        padding: 10px;
+        margin-top: 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.06);
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+
+
     @media (min-width: 768px) {
+
+        .banner_doctor {
+    
+
+            .banner_doctor-img {
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                span {
+                    transform: translate(-10px, 26px);
+                    position: absolute;
+                    img {
+                     width: 340px;
+                     height: 300px;
+                    }
+                }
+        
+                img {
+                    z-index: 5;
+                    width:  255px;
+                    height: 347px;
+                    position: relative;
+                    
+                }
+            }
+
+            .banner_reviews {
+                width: 150px;
+                z-index: 10;
+                position: absolute;
+                transform: translate(-200px, 35px);
+            }
+            
+           .speakers {
+                margin-bottom: 0;
+                height: 90px;
+                z-index: 10;
+                position: absolute;
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+                transform: translate(-211px, 245px);
+                border: 1px solid rgba(255, 255, 255, 0.7);
+                background: linear-gradient(213.03deg, rgba(244, 244, 244, 0.4) 0%,
+                 rgba(244, 244, 244, 0.13) 0.01%, rgba(226, 226, 226, 0.41) 100%);
+           }
+
+           .schedule {
+                z-index: 4;
+                position: absolute;
+                transform: translate(164px,60px);
+           }
+         
+        }
+
+        .banner_slider {
+            .slick-arrow {
+                visibility: hidden;
+            }
+           div {
+
+                img {
+                    width: 125px;
+                }
+           }
+        }
     
     }
+
     @media (min-width: 1024px) {
         
+        .banner_content {
+            display: flex;
+            align-items: center;
+        }
+
+        .banner_text {
+            text-align: left;
+            width: 400px;
+            margin-right: 125px;
+
+            h1 {
+                font-size: 58px;
+                line-height: 68px;
+
+            }
+        }
+
+        .banner_doctor {
+            margin-bottom: 0px;
+
+            .banner_doctor-img {
+                img {
+                    width: 270px;
+                    height: 370px;
+                }
+
+                span {
+                    transform: translate(-10px,38px);
+                }
+            }
+
+            .banner_reviews {
+                width: 130px;
+                height: 115px;
+            }
+
+            .speakers {
+                width: 185px;
+                height: 85px;
+            }
+
+            .schedule {
+                width: 130px;
+                height: 115px;
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+
+       
+
+        .banner_slider {
+            margin-top: 0;
+        }
     }
+
     @media (min-width: 1280px) {
-        
+
+        .banner_text {
+            margin-right: 250px;
+
+            h3 {
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 68px;
+                line-height: 76px;
+
+
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 47px;
+            }
+
+
+            form {
+                max-width: 410px;
+                img {
+                    margin-right: 9px;
+                }
+                input[type=tel] {
+                    font-size: 14px;
+                    margin-right: 70px;
+                }
+                input[type=submit] {
+                    width: 135px;
+                    height: 47px;
+                    font-size: 14px;
+
+                }
+            }
+        }
+
+        .banner_doctor {
+
+            .banner_doctor-img {
+
+                img {
+                    width: 430px;
+                    height: 628px;
+                    transform: translate(-10px, -5px);
+                }
+
+                span {
+                    transform: translate(0px,61px);
+                    img {
+                        width: 570px;
+                        height: 510px; 
+                    }     
+                }
+            }
+
+            .banner_reviews {
+
+                transform: translate(-259px,120px);
+            }
+
+            .speakers {
+                width: 200px;
+                height: 110px;
+                padding: 15px 15px;
+                transform: translate(-295px,454px);
+            }
+
+            .schedule {
+                width: 130px;
+                height: 115px;
+                transform: translate(210px,186px);
+                span {
+                    font-size: 9px;
+                }
+            }
+
+            
+        }
+
+        .banner_slider {
+
+            .slick-arrow {
+                visibility: visible;
+                border: none;
+                background: none;
+            }
+           div {
+
+                img {
+                    width: 170px;
+                }
+           }
+
+           button, input, optgroup, select, textarea {
+            height: 20px;
+           }
+        }
+       
     }
 }
 
