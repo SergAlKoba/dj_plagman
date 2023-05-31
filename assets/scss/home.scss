@@ -30,8 +30,8 @@
             margin-bottom: 20px;
             font-family: 'Proxima Nova Rg';
         }
-
         form {
+            margin: 0 auto;
             display: flex;
             max-width: 335px;
             border-radius: 32px;
@@ -165,17 +165,36 @@
     }
 
     .banner_slider {
-        padding: 10px;
+        padding: 10px 0;
         margin-top: 10px;
-        background: #FFFFFF;
-        box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.06);
-        div {
-            display: flex;
+        position: relative;
+        &::after{
+            content: '';
+            top: 0;
+            left: 50%;
+            z-index: 0;
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            background: #FFFFFF;
+            box-shadow: 0px 10px 30px 5px rgba(0, 0, 0, 0.06);
+            transform: translate(-50%, 0);
+        }
+        .slick-list{
+            z-index: 2;
+            margin: 0 -10px;
+            position: relative;
+        }
+        .slick-slide{
+            margin: 0 10px;
+        }
+        .slider_item {
+            height: 50px;
+            display: flex !important;
             align-items: center;
             justify-content: center;
-            
             img {
-                width: 100px;
+                width: 100%;
             }
         }
     }
@@ -185,60 +204,63 @@
     @media (min-width: 768px) {
 
         .banner_doctor {
-    
-
+            padding: 30px 0 0;
+            position: relative;
             .banner_doctor-img {
-                
                 display: flex;
-                justify-content: center;
+                position: relative;
                 align-items: center;
+                justify-content: center;
                 span {
-                    transform: translate(-10px, 26px);
+                    left: 50%;
+                    bottom: 0;
                     position: absolute;
+                    transform: translate(-50%, 0);
                     img {
-                     width: 340px;
-                     height: 300px;
+                       width: 340px;
+                       display: block;
                     }
                 }
         
-                img {
+                .doctor {
                     z-index: 5;
                     width:  255px;
-                    height: 347px;
                     position: relative;
-                    
                 }
             }
 
             .banner_reviews {
+                top: 0;
+                left: 0;
                 width: 150px;
                 z-index: 10;
                 position: absolute;
-                transform: translate(-200px, 35px);
             }
             
-           .speakers {
-                margin-bottom: 0;
-                height: 90px;
+            .speakers {
+                left: 0;
+                bottom: 0;
                 z-index: 10;
+                height: 90px;
+                margin-bottom: 0;
                 position: absolute;
                 border-radius: 10px;
                 backdrop-filter: blur(10px);
-                transform: translate(-211px, 245px);
                 border: 1px solid rgba(255, 255, 255, 0.7);
-                background: linear-gradient(213.03deg, rgba(244, 244, 244, 0.4) 0%,
-                 rgba(244, 244, 244, 0.13) 0.01%, rgba(226, 226, 226, 0.41) 100%);
-           }
+                background: linear-gradient(213.03deg, rgba(244, 244, 244, 0.4) 0%,  rgba(244, 244, 244, 0.13) 0.01%, rgba(226, 226, 226, 0.41) 100%);
+            }
 
-           .schedule {
+            .schedule {
+                top: 0;
+                right: 0;
                 z-index: 4;
                 position: absolute;
-                transform: translate(164px,60px);
-           }
+            }
          
         }
 
         .banner_slider {
+            margin: 0;
             .slick-arrow {
                 visibility: hidden;
             }
@@ -257,31 +279,32 @@
         .banner_content {
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
 
         .banner_text {
-            text-align: left;
             width: 400px;
-            margin-right: 125px;
-
+            text-align: left;
             h1 {
                 font-size: 58px;
                 line-height: 68px;
 
             }
+            form{
+                margin: 0;
+            }
         }
 
         .banner_doctor {
             margin-bottom: 0px;
-
+            margin-right: 43px;
             .banner_doctor-img {
                 img {
                     width: 270px;
-                    height: 370px;
                 }
 
                 span {
-                    transform: translate(-10px,38px);
+                    
                 }
             }
 
@@ -308,6 +331,11 @@
 
         .banner_slider {
             margin-top: 0;
+            &::after {
+                right: 0;
+                left: initial;
+                transform: translate(0,0);
+            }
         }
     }
 
@@ -315,7 +343,7 @@
 
         .banner_text {
             margin-right: 250px;
-
+            transform: translate(0, 6px);
             h3 {
                 font-size: 16px;
                 line-height: 19px;
@@ -325,14 +353,14 @@
             h1 {
                 font-size: 68px;
                 line-height: 76px;
-
+                margin: 0 0 22px;
 
             }
 
             span {
                 font-size: 14px;
                 line-height: 17px;
-                margin-bottom: 47px;
+                margin-bottom: 41px;
             }
 
 
@@ -355,40 +383,35 @@
         }
 
         .banner_doctor {
-
+            margin-bottom: 0;
+            padding: 13px 0 0;
+            margin-right: 70px;
             .banner_doctor-img {
 
-                img {
+                .doctor {
                     width: 430px;
-                    height: 628px;
-                    transform: translate(-10px, -5px);
                 }
 
                 span {
-                    transform: translate(0px,61px);
                     img {
                         width: 570px;
-                        height: 510px; 
                     }     
                 }
             }
 
             .banner_reviews {
 
-                transform: translate(-259px,120px);
             }
 
             .speakers {
                 width: 200px;
                 height: 110px;
                 padding: 15px 15px;
-                transform: translate(-295px,454px);
             }
 
             .schedule {
                 width: 130px;
                 height: 115px;
-                transform: translate(210px,186px);
                 span {
                     font-size: 9px;
                 }
@@ -398,18 +421,28 @@
         }
 
         .banner_slider {
-
+            padding: 36px 0;
             .slick-arrow {
-                visibility: visible;
+                top: 12px;
+                left: 2px;
+                z-index: 5;
                 border: none;
                 background: none;
+                position: absolute;
+                visibility: visible;
             }
-           div {
-
-                img {
-                    width: 170px;
-                }
-           }
+            .next{
+                left: 32px;
+            }
+            .slick-list {
+                margin: 0 -15px;
+            }
+            .slick-slide{
+                margin: 0 15px;
+            }
+            .slider_item {
+                height: 62px;
+            }
 
            button, input, optgroup, select, textarea {
             height: 20px;
